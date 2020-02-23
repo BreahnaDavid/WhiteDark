@@ -2,6 +2,9 @@
 
 By [Dinu Adrian](zzanonym.666@gmail.com)
 
+## Web application link
+whitedark.netlify.com
+
 ## Instructions
 
 1. Navigate to [repo](https://github.com/zZaNonym/WhiteDark)
