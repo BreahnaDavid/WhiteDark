@@ -1,0 +1,87 @@
+.body {
+  position: absolute;
+  width: 1000px;
+  background: white;
+  left: 50%;
+  top: 150px;
+  transform: translate(-50%);
+  border-radius: 10px;
+  padding-bottom: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+@media only screen and (max-width: 1300px) {
+  .body {
+    width: 800px;
+  }
+}
+@media only screen and (max-width: 850px) {
+  .body {
+    width: 400px;
+  }
+  .settings_menu_title {
+    font-size: 10px;
+  }
+}
+.profile_avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+}
+.avatar_box {
+  left: 50%;
+  top: -50px;
+  transform: translate(-50px);
+  position: relative;
+  width: 100px;
+}
+.avatar_box .nickname {
+  text-align: center;
+  margin: 0;
+}
+
+.settings_grid_container {
+  margin: 0 20px;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-column-gap: 30px;
+}
+.settings_menu {
+  border: 1px solid rgb(116, 116, 116);
+  border-radius: 3px;
+}
+.settings_menu_title {
+  background-color: rgb(240, 236, 236);
+  width: calc(100%-5px);
+  height: 30px;
+  text-align: start;
+  padding: 0 5px;
+  display: block;
+  align-items: center;
+  display: flex;
+  border-bottom: 1px solid rgb(116, 116, 116);
+}
+.settings_button {
+  text-decoration: none;
+  text-align: start;
+  padding: 0 5px;
+  width: calc(100%-5px);
+  height: 30px;
+  align-items: center;
+  display: flex;
+  color: blue;
+  background-color: white;
+  border-bottom: 1px solid rgb(116, 116, 116);
+}
+.settings_button:last-child {
+  border: 0;
+}
+.settings_button:hover {
+  background-color: rgb(247, 247, 247);
+}
+.selected {
+  border-left: 2px solid red !important;
+  transition: 0.3s;
+}
+.selected:hover {
+  background-color: white !important;
+}
