@@ -4,9 +4,9 @@ By [Dinu Adrian](zzanonym.666@gmail.com)
 
 ## Instructions
 
-1. Navigate to [repo](https://github.com/janephilipps/tic-tac-toe)
+1. Navigate to [repo](https://github.com/zZaNonym/WhiteDark)
 2. Clone locally using
-   `git clone git@github.com:janephilipps/tic-tac-toe.git`
+   `git clone git@github.com:zZaNonym/WhiteDark.git`
 3. Install dependencies using `npm install`
 4. Start your server using `npm start`
 5. Navigate to app in [browser](http://localhost:3000)
