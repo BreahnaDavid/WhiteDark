@@ -3,7 +3,7 @@
 By [Dinu Adrian](zzanonym.666@gmail.com)
 
 ## Web application 
-[link](whitedark.netlify.com)
+[link](https://whitedark.netlify.com)
 
 ## Instructions
 
