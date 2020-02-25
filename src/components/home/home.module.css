@@ -1,0 +1,60 @@
+.content {
+  position: absolute;
+  top: 39%;
+  width: 100%;
+}
+.icons {
+  color: white;
+  text-align: center;
+}
+.icons i {
+  font-size: 50px;
+  margin-right: 10px;
+}
+.text {
+  font-size: 50px;
+  color: white;
+  text-align: center;
+}
+.button_box {
+  padding: 20px 0;
+  text-align: center;
+}
+.button_box a {
+  text-decoration: none;
+}
+.btn1 {
+  padding: 13px 18px;
+  background-color: transparent;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 13px;
+  border: 2px solid white;
+  border-top-left-radius: 15px;
+  transition: all 0.5s ease-in;
+  margin-right: -2px;
+}
+.btn1:hover {
+  text-decoration: none;
+  color: white;
+  background-color: deepskyblue;
+  border-color: deepskyblue;
+}
+.btn2 {
+  padding: 13px 18px;
+  background-color: transparent;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 13px;
+  border: 2px solid white;
+  border-bottom-right-radius: 15px;
+  transition: all 0.5s ease-in;
+}
+.btn2:hover {
+  text-decoration: none;
+  color: white;
+  background-color: orangered;
+  border-color: orangered;
+}

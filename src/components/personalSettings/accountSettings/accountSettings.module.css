@@ -1,0 +1,47 @@
+.accountSettings_title span {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.accountSettings_area {
+  display: flex;
+}
+.accountSettings_title {
+  border-bottom: 1px solid rgb(202, 202, 202);
+  display: flex;
+  width: fit-content;
+}
+.accountSettings_button {
+  margin: 10px 0;
+  width: 150px;
+  height: 40px;
+}
+.accountSettings_box {
+  justify-content: center;
+  width: fit-content;
+  margin-bottom: 5px;
+}
+.accountSettings_box p {
+  margin: 0;
+  font-size: 15px;
+}
+.accountSettings_delete {
+  color: red;
+}
+@media only screen and (max-width: 850px) {
+  .accountSettings_button {
+    margin: 5px 0;
+    width: 100px;
+    height: 20px;
+    font-size: 10px;
+  }
+  .accountSettings_area {
+    display: block;
+  }
+  .accountSettings_box p {
+    font-size: 10px;
+  }
+  .accountSettings_title span {
+    font-size: 15px;
+    margin-bottom: 5px;
+  }
+}

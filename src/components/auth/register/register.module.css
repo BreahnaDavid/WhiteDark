@@ -1,0 +1,111 @@
+.register_box {
+  width: 400px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  left: 50%;
+  top: 150px;
+  position: absolute;
+  transform: translate(-50%);
+  box-sizing: border-box;
+  padding: 60px 30px 15px 30px;
+}
+@media screen and (max-width: 600px) {
+  .register_box {
+    width: 320px;
+  }
+  .register_box p {
+    font-size: 15px;
+  }
+  .register_avatar {
+    transform: translate(-58%) !important;
+  }
+  .register_box button {
+    height: 30px !important;
+    margin: 10px 0 !important;
+    font-size: 15px !important;
+  }
+}
+.register_avatar {
+  background: url('../../../images/login_avatar.jpg');
+  width: 100px;
+  height: 100px;
+  background-size: cover;
+  border-radius: 50%;
+  top: -50px;
+  right: 50px;
+  transform: translate(-95px);
+  position: absolute;
+}
+.register_box h1 {
+  margin: 0;
+  text-align: center;
+  font-size: 22px;
+}
+.register_box label {
+  display: block;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.register_input .register_input_box {
+  width: 90%;
+  margin-bottom: 5px;
+  border: none;
+  background: transparent;
+  height: 30px;
+  color: white;
+  outline: none;
+  font-size: 16px;
+}
+.register_input input[type='checkbox'] {
+  margin: 0 !important;
+  right: 0;
+  float: right;
+}
+.register_input {
+  border-bottom: 1px solid #fff;
+  margin-bottom: 10px;
+}
+.register_box button {
+  width: 100%;
+  margin: 20px 0;
+  height: 40px;
+  background-color: red;
+  border: none;
+  color: white;
+  font-size: 20px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 25px;
+}
+.register_box button:hover {
+  color: red;
+  background: transparent;
+  border: 1px solid red;
+  cursor: pointer;
+}
+.register_box button:after {
+  content: '';
+  display: block;
+  background: red;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px !important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s;
+}
+.register_box button:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: all 0s;
+}
+.register_box a {
+  text-decoration: none;
+  color: white;
+}
+.register_box a:hover {
+  color: red;
+}

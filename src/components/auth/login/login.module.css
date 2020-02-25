@@ -1,0 +1,103 @@
+.login_box {
+  width: 320px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  left: 50%;
+  top: 200px;
+  position: absolute;
+  transform: translate(-50%);
+  box-sizing: border-box;
+  padding: 60px 30px 15px 30px;
+}
+.login_avatar {
+  background: url('../../../images/login_avatar.jpg');
+  width: 100px;
+  height: 100px;
+  background-size: cover;
+  border-radius: 50%;
+  top: -50px;
+  right: 50px;
+  transform: translate(-57px);
+  position: absolute;
+}
+.login_box h1 {
+  margin: 0;
+  text-align: center;
+  font-size: 22px;
+}
+.login_box label {
+  position: absolute;
+  font-size: 16px;
+  top: 10px;
+  left: 0;
+  pointer-events: none;
+  transition: 0.5s;
+}
+.login_box .input_box input:focus ~ label,
+.login_box .input_box input:valid ~ label {
+  top: -5px;
+  color: red;
+  font-size: 12px;
+}
+.input_box {
+  position: relative;
+}
+.login_box .input_box .input {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.login_box .input_box .input {
+  background: transparent;
+  border-bottom: 1px solid #fff !important;
+  height: 40px;
+  border: 0;
+  color: white;
+  outline: none;
+  font-size: 16px;
+}
+
+.login_box .login_button {
+  width: 100%;
+  margin: 20px 0;
+  height: 40px;
+  background-color: red;
+  border: none;
+  color: white;
+  font-size: 20px;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+}
+.login_box .login_button:hover {
+  color: red;
+  background: transparent;
+  border: 1px solid red;
+  cursor: pointer;
+}
+.login_box .login_button:after {
+  content: '';
+  background: red;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px !important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s;
+}
+
+.login_box .login_button:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s;
+}
+.login_box a {
+  text-decoration: none;
+  color: white;
+}
+.login_box a:hover {
+  color: red;
+}
