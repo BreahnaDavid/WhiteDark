@@ -1,0 +1,105 @@
+.body {
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  position: relative;
+}
+.form_builder_box {
+  position: relative;
+  top: 150px;
+  left: 0;
+  width: 100%;
+}
+.form_header {
+  border-top: 10px solid red;
+}
+.form_body {
+  margin-top: 10px;
+}
+.form_header,
+.form_body {
+  width: 800px;
+  background-color: white;
+  left: 50%;
+  transform: translate(-400px);
+  position: relative;
+  border-radius: 10px;
+  padding: 20px 20px;
+}
+.form_header_input {
+  display: block;
+  background: transparent;
+  border: none;
+  width: 100%;
+  color: black;
+  outline: none;
+  font-size: 20px;
+  height: 50px;
+  border-bottom: 2px solid rgb(216, 216, 216);
+}
+.form_header_input::placeholder {
+  font-size: 20px;
+  color: black;
+}
+.form_body_select {
+  width: 100px;
+  border: 1px solid rgb(192, 192, 192);
+}
+.active {
+  border-left: 5px solid red;
+}
+.menu {
+  position: absolute;
+  right: -50px;
+  width: 40px;
+  height: 40px;
+  top: 0;
+  border-radius: 10px;
+  background-color: white;
+  text-align: center;
+  font-size: 40px;
+  color: red;
+}
+.save {
+  position: absolute;
+  right: -50px;
+  width: 40px;
+  height: 40px;
+  top: 60px;
+  border-radius: 10px;
+  background-color: white;
+  text-align: center;
+  font-size: 10px;
+  font-weight: bold;
+  color: green;
+}
+
+.menu:hover {
+  background-color: red;
+  color: white;
+}
+.form_body_select_label {
+  font-size: 30px;
+  margin-right: 10px;
+}
+.form_body_select {
+  width: 80%;
+  height: 30px;
+}
+.form_body_footer {
+  border-top: 2px solid rgb(192, 192, 192);
+  margin-top: 10px;
+  padding: 5px 0;
+}
+.form_body_options {
+  margin: 10px 0;
+  display: flex;
+}
+.form_body_options label {
+  margin-right: 5px;
+}
+
+.input_option_box {
+  margin: 0 5px;
+}

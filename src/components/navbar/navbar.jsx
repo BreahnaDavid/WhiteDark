@@ -31,8 +31,13 @@ function Navbar(props) {
           {login ? (
             <>
               <li className={style.item}>
-                <NavLink to='/chat'>
-                  <i className='fas fa-comment-alt'></i>Chat
+                <NavLink to='/forms'>
+                  <i className='fas fa-comment-alt'></i>Forms
+                </NavLink>
+              </li>
+              <li className={style.item}>
+                <NavLink to='/form-builder'>
+                  <i className='fas fa-comment-alt'></i>FormBuild
                 </NavLink>
               </li>
               <li className={style.item + ' ' + style.me_area}>
