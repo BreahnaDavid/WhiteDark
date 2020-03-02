@@ -46,7 +46,7 @@ function Forms(props) {
               style={{ backgroundColor: 'red' }}
               onClick={() => {
                 props.deleteFormSchemaThunk(item._id);
-                props.getFormsDataThunk();
+      
               }}>
               Delete
             </button>
