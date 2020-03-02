@@ -37,46 +37,46 @@ function FormBuilder(props) {
       setState({ ...state, [name]: value });
     }
 
-    control();
+    validate();
   };
 
-  const control = () => {
+  const validate = () => {
     let errors = { inputs: [] };
-    let control = true;
+    let validate = true;
 
     state.inputs.forEach((item, key) => {
       if (!item.label) {
-        control = false;
+        validate = false;
       } else errors.inputs[key] = {};
     });
 
     if (!state.formName) {
-      control = false;
+      validate = false;
       errors.formName = 'Form name is required';
     }
     if (!state.formDesc) {
-      control = false;
+      validate = false;
       errors.formDesc = 'Form description is required';
     }
     if (state.inputs.length === 0) {
       errors.inputList = 'Inputs is required';
-      control = false;
+      validate = false;
     }
-    if (control) return true;
+    if (validate) return true;
     else setErrors({ ...errors });
     return false;
   };
 
   const onSubmit = () => {
-    if (control()) {
+    if (validate()) {
       props.saveFormSchemaThunk(state);
       setState({ inputs: [], formName: '', formDesc: '' });
     }
   };
 
   const inputsOptions = key => {
-    if (state.inputs[key].type === 'text' || state.inputs[key].type === 'email')
-      return (
+    const inputs = {
+      text: (
         <div className={style.input_option_box}>
           <label htmlFor='placeholder'>Placeholder</label>
           <input
@@ -89,9 +89,22 @@ function FormBuilder(props) {
             }
           />
         </div>
-      );
-    else if (state.inputs[key].type === 'number')
-      return (
+      ),
+      email: (
+        <div className={style.input_option_box}>
+          <label htmlFor='placeholder'>Placeholder</label>
+          <input
+            onChange={e => onHandleChnage(e, key)}
+            type='text'
+            id='placeholder'
+            name='placeholder'
+            value={
+              state.inputs[key].placeholder ? state.inputs[key].placeholder : ''
+            }
+          />
+        </div>
+      ),
+      number: (
         <>
           <div className={style.input_option_box}>
             <label htmlFor='maxNumber'>Max number</label>
@@ -103,7 +116,7 @@ function FormBuilder(props) {
               value={state.inputs[key].maxNumber}
             />
           </div>
-          <div>
+          <div className={style.input_option_box}>
             <label htmlFor='minNumber'>Min number</label>
             <input
               onChange={e => onHandleChnage(e, key)}
@@ -114,9 +127,8 @@ function FormBuilder(props) {
             />
           </div>
         </>
-      );
-    else if (state.inputs[key].type === 'select')
-      return (
+      ),
+      select: (
         <div className={style.input_option_box}>
           <label htmlFor='selectOption'>Select Option</label>
           <input
@@ -128,9 +140,8 @@ function FormBuilder(props) {
             value={state.inputs[key].selectOption}
           />
         </div>
-      );
-    else if (state.inputs[key].type === 'textarea')
-      return (
+      ),
+      textarea: (
         <div className={style.input_option_box}>
           <label htmlFor='maxLength'>Max length</label>
           <input
@@ -141,7 +152,9 @@ function FormBuilder(props) {
             value={state.inputs[key].maxLength}
           />
         </div>
-      );
+      )
+    };
+    return inputs[state.inputs[key].type];
   };
 
   const menuRender = () => {
@@ -152,7 +165,7 @@ function FormBuilder(props) {
             setState({ ...state, inputs: [...state.inputs, { type: '' }] })
           }
           className={style.menu}>
-          +
+          Add input
         </div>
         <button onClick={onSubmit} className={style.save}>
           Save
@@ -198,7 +211,6 @@ function FormBuilder(props) {
         <div className={style.form_body_options}>
           {state.inputs[key].type && (
             <>
-              {inputsOptions(key)}
               <div>
                 <label htmlFor='label'>Label</label>
                 <input
@@ -210,27 +222,30 @@ function FormBuilder(props) {
                   placeholder='Label is required'
                 />
               </div>
+              {inputsOptions(key)}
             </>
           )}
         </div>
 
         <div className={style.form_body_footer}>
-          <div style={{ float: 'right', display: 'flex' }}>
+          <div>
             <i
               onClick={() => {
                 return deleteInput(key);
               }}
-              style={{ marginRight: '10px' }}
+              style={{ float: 'left' }}
               className='fas fa-trash-alt'
             />
-            <label htmlFor='required'>Required</label>
-            <input
-              checked={state.inputs[key].required}
-              onChange={e => onHandleChnage(e, key)}
-              type='checkbox'
-              name='required'
-              id='required'
-            />
+            <div style={{ float: 'right' }}>
+              <label htmlFor='required'>Required</label>
+              <input
+                checked={state.inputs[key].required}
+                onChange={e => onHandleChnage(e, key)}
+                type='checkbox'
+                name='required'
+                id='required'
+              />
+            </div>
           </div>
         </div>
         {active === key && menuRender()}

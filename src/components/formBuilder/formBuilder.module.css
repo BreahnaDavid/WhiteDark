@@ -58,7 +58,7 @@
   border-radius: 10px;
   background-color: white;
   text-align: center;
-  font-size: 40px;
+  font-size: 15px;
   color: red;
 }
 .save {
@@ -98,8 +98,14 @@
 }
 .form_body_options label {
   margin-right: 5px;
+  float: left;
 }
-
-.input_option_box {
-  margin: 0 5px;
+.form_body_options input {
+  position: relative;
+  float: right;
+  width: 600px;
+}
+.form_body_options {
+  display: flex;
+  flex-direction: column;
 }

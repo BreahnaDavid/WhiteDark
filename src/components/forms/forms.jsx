@@ -13,7 +13,9 @@ function Forms(props) {
 
   if (!props.checked) {
     props.getFormsDataThunk();
-  } else if (!state.forms) setState({ forms: [...props.forms] });
+  } else if (!state.forms) {
+    setState({ forms: [...props.forms] });
+  }
 
   const onSubmit = (e, key) => {
     e.preventDefault();
@@ -27,7 +29,7 @@ function Forms(props) {
     props.saveFormDataThunk(data);
     setState({ ...stateCopy });
   };
-  const onHandelChnage = (e, key, index) => {
+  const handleChange = (e, key, index) => {
     e.preventDefault();
     const { value } = e.target;
     const forms = state.forms;
@@ -65,7 +67,7 @@ function Forms(props) {
                     item.type === 'date') && (
                     <input
                       onChange={e => {
-                        onHandelChnage(e, key, index);
+                        handleChange(e, key, index);
                       }}
                       value={state.forms[key].inputs[index].value}
                       className={style.form_input}
@@ -78,7 +80,7 @@ function Forms(props) {
                   {item.type === 'number' && (
                     <input
                       onChange={e => {
-                        onHandelChnage(e, key, index);
+                        handleChange(e, key, index);
                       }}
                       value={state.forms[key].inputs[index].value}
                       className={style.form_input}
@@ -96,7 +98,7 @@ function Forms(props) {
                       maxLength={item.maxLength}
                       required={item.required}
                       onChange={e => {
-                        onHandelChnage(e, key, index);
+                        handleChange(e, key, index);
                       }}
                       value={state.forms[key].inputs[index].value}
                     />
@@ -107,7 +109,7 @@ function Forms(props) {
                       className={style.form_input}
                       value={state.forms[key].inputs[index].value}
                       onChange={e => {
-                        onHandelChnage(e, key, index);
+                        handleChange(e, key, index);
                       }}>
                       <option value='' selected disabled hidden>
                         Select option
