@@ -1,0 +1,60 @@
+.body {
+  top: 0;
+  left: 0;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+.forms_box {
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  transform: translate(-210px);
+  width: 420px;
+}
+
+.form_box {
+  background-color: white;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.form_header {
+  text-align: center;
+}
+.form_name {
+  font-size: 30px;
+  display: block;
+  color: orange;
+}
+.form_desc {
+  display: block;
+  font-size: 20px;
+  color: rgb(117, 117, 117);
+}
+.form_input_box label {
+  margin-right: 10px;
+  color: blue;
+  display: block;
+}
+.form_input {
+  width: 400px;
+  height: 20px;
+  margin: 5px 0;
+}
+.form {
+  padding: 10px 10px;
+  align-items: center;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+}
+.submit_button {
+  width: 50px;
+  height: 50px;
+  color: green;
+  border-radius: 50px;
+}
+.textarea {
+  resize: vertical;
+  max-height: 100px;
+}
